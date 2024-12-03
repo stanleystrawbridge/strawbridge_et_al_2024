@@ -1,4 +1,4 @@
-%% PAPER TITLE
+%% Donor embryonic stem cells impede host epiblast specification in 8-cell stage chimeras by crowding and FGF4 signalling
 clear
 % Must be in '.code\' directory
 
