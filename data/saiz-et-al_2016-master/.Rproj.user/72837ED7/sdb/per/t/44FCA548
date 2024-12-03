@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "stage <- function(dataset){\n        # Given a certain dataset, evaluate the cell count of each embryo\n        # and assign values to a new 'Stage' columns accordingly\n        # >= 120 cells, Stage = '>120'; \n        # <120 cells & >= 90 cells, Stage = '90-120'; \n        # etc\n        dataset$Stage <- ifelse(dataset$Cellcount >= 150, \n                                '>150',\n                                ifelse(dataset$Cellcount >= 120 &\n                                               dataset$Cellcount < 150, \n                                       '120_150', \n                                       ifelse(dataset$Cellcount >= 90 & \n                                                      dataset$Cellcount < 120, \n                                              '90_120',\n                                              ifelse(dataset$Cellcount < 90 & \n                                                             dataset$Cellcount >= 64, \n                                                     '64_90',\n                                                     ifelse(dataset$Cellcount < 64 & \n                                                                    dataset$Cellcount >= 32,\n                                                            '32_64', '<32')))))\n        # Convert 'Stage' into a factor with the levels ordered\n        # in increasing number of cells\n        dataset$Stage <- factor(dataset$Stage, levels = c('<32', '32_64', \n                                                          '64_90', '90_120', \n                                                          '120_150', '>150'))\n        return(dataset)\n}",
+    "created" : 1539289595487.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2109718151",
+    "id" : "44FCA548",
+    "lastKnownWriteTime" : 1538480560,
+    "last_content_update" : 1538480560,
+    "path" : "C:/Users/Strawbridge/Dropbox/nicholsLab/FgfDependentPopulationDynamics/DATA/theoretical/sheffield2018/saiz2016natureCommunications/saiz-et-al_2016-master/stage.R",
+    "project_path" : "stage.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,37 @@
+% epi_icm_%   
+
+% SUMMARY STATS  
+
+%    Group #  Condition                
+%          1  15 null ES cell injected 
+%          2  10 null                  
+%          3  noninjected              
+%          4  10 WT ES cell injected   
+%          5  15 WT                    
+
+
+%    Group #         Mean       StdDev            N 
+           1         0.91       0.1507           10 
+           2         0.84       0.1295           10 
+           3         0.43       0.1132           10 
+           4         0.64       0.1346           12 
+           5         0.80       0.0944           10 
+% ANOVA       
+
+%    Columns  Description              
+%        1,2  Groups Compared, Null Hypothesis H_0 is "The two groups are drawn from the same distribution?" 
+%          3  p_value, level of significance is 0.05. 
+%          4  Accept or reject H_0? If p_vale > 0.05, acceptreject. Accept = 0; Reject < 0 idicates number of stars. 
+
+
+% Group 1   Group 2      p-value   # Stars 
+        1         2   2.1362e-01         0 
+        1         3   3.5556e-11         4 
+        1         4   6.6103e-06         4 
+        1         5   5.5917e-02         0 
+        2         3   2.7133e-09         4 
+        2         4   4.7792e-04         3 
+        2         5   4.8772e-01         0 
+        3         4   3.1705e-04         3 
+        3         5   3.1196e-08         4 
+        4         5   4.0355e-03         2 
